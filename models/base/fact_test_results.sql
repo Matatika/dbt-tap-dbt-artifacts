@@ -1,7 +1,7 @@
 {{ config(materialized='table') }}
 
 with run_results as (
-    select * from {{ ref('run_results_snapshot') }}
+    select * from {{ source ('dbt_artifacts_source', 'run_results') }}
 ),
 test_run_results as (
     select
