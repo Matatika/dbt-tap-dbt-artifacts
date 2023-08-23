@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: dbt_artifacts_source
+    schema: "{{ env_var('DBT_TARGET_SCHEMA') }}"
+    description: Data synced from tap-dbt-artifacts.
+    tables:
+      - name: run_results
+        description: Source table for results of dbt executions

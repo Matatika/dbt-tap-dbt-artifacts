@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: fact_test_results
+    description: dbt test execution results
+  - name: run_results_snapshot
+    description: Snapshot table for dbt run results
