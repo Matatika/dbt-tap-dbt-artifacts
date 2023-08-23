@@ -1,4 +1,4 @@
-name: tap_dbt-artifacts
+name: tap_dbt_artifacts
 version: "1.0.0"
 require-dbt-version: [">=1.0.0", "<2.0.0"]
 
