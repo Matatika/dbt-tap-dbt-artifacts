@@ -20,6 +20,6 @@ test_run_results as (
         jsonb_array_elements(results) AS result_item,
         jsonb_array_elements(result_item->'timing') AS timing_item
     WHERE timing_item->>'name' = 'execute'
-    and result_item->>'status' != 'success'
+    and args__rpc_method = 'test'
 )
 select * from test_run_results
