@@ -14,7 +14,7 @@ test_run_results as (
         (result_item->>'failures')::int AS failures,
         result_item->>'thread_id' AS thread_id,
         result_item->>'unique_id' AS unique_id,
-        (result_item->>'execution_time')::float AS execution_time,
+        round(cast(result_item->>'execution_time' as numeric), 3) AS execution_time,
         result_item->>'adapter_response' AS adapter_response
     FROM run_results,
         jsonb_array_elements(results) AS result_item,
