@@ -3,5 +3,5 @@ version: 2
 models:
   - name: fact_test_results
     description: All dbt test execution results
-  - name: fact_test_results_grouped
+  - name: vw_test_results_grouped
     description: dbt test execution results grouped by test
