@@ -5,7 +5,7 @@ with test_run_results as (
 ),
 test_results_grouped as (
     select 
-        unique_id 
+        unique_id  as "unique_id"
         , count(*) "total_runs"
         , sum(case when status = 'pass' then 1 else 0 end) "total_passes"
         , sum(case when status = 'fail' then 1 else 0 end)  "total_failures"
